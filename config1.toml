@@ -1,0 +1,17 @@
+# 2024-01-08T15:52:36+00:00: Added by bash
+[plugins]
+  [plugins."io.containerd.grpc.v1.cri"]
+    [plugins."io.containerd.grpc.v1.cri".containerd]
+      default_runtime_name = "kata"
+      [plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+        [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata]
+          runtime_type = "io.containerd.kata.v2"
+  privileged_without_host_devices = true
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata.options]
+    ConfigPath = "/opt/kata/share/defaults/kata-containers/configuration.toml"
+        [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata-clh]
+          runtime_type = "io.containerd.kata-clh.v2"
+  privileged_without_host_devices = true
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata-clh.options]
+    ConfigPath = "/opt/kata/share/defaults/kata-containers/configuration-clh.toml"
+ubuntu@wasmpot-k3s-admin:~$ 
