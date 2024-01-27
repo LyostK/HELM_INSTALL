@@ -14,4 +14,7 @@
   privileged_without_host_devices = true
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata-clh.options]
     ConfigPath = "/opt/kata/share/defaults/kata-containers/configuration-clh.toml"
-ubuntu@wasmpot-k3s-admin:~$ 
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata-fc]
+          runtime_type = "io.containerd.kata-fc.v2"
+          [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.kata-fc.options]
+            ConfigPath = "/opt/kata/share/defaults/kata-containers/configuration-fc.toml"
