@@ -1,1 +1,0 @@
-curl -sfL https://get.k3s.io | K3S_CLUSTER_INIT=true INSTALL_K3S_COMMIT=6b11d860374f938623479b0d06aeb3c1ac87ce86 sh -
